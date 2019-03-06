@@ -57,8 +57,8 @@ func Render(data []byte) (*Document, error) {
 	return d, nil
 }
 
-func parseFront(data []byte) (map[string]string, error) {
-	var front map[string]string
+func parseFront(data []byte) (map[string]interface{}, error) {
+	var front map[string]interface{}
 
 	if err := yaml.Unmarshal(data, &front); err != nil {
 		return nil, err
