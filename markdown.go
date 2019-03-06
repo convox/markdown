@@ -17,7 +17,7 @@ var (
 
 type Document struct {
 	Body  []byte
-	Front map[string]string
+	Front map[string]interface{}
 }
 
 func Read(data []byte) (*Document, error) {
