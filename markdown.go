@@ -20,7 +20,7 @@ type Document struct {
 	Front map[string]interface{}
 }
 
-func Read(data []byte) (*Document, error) {
+func Render(data []byte) (*Document, error) {
 	d := &Document{}
 
 	m := reDocument.FindSubmatch(data)
